@@ -1,0 +1,257 @@
+/* --------------------global----------------*/
+body {
+    background: url("../images/leaves.png");
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------container------------------*/
+
+.m-container {
+    max-width: 72em !important;
+    margin: auto !important;
+}
+
+.m-container-small {
+    max-width: 60% !important;
+    margin: auto !important;
+}
+
+.m-container-big {
+    max-width: 90% !important;
+    margin: auto !important;
+}
+
+
+/* padding */
+.m-padded-mini {
+    padding: 0.2em !important;
+}
+.m-padded-tiny {
+    padding: 0.3em !important;
+}
+
+.m-padded-lr {
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+.m-padded-none {
+    padding: 0 !important;
+}
+
+.m-padded-large {
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+
+/* ---------------------padding-------------------tb */
+
+.m-padded-lr-small {
+    padding: auto 1em;
+}
+
+.m-padded-tb-none {
+    padding-top: 0em !important;
+    padding-bottom: 0em !important;
+}
+
+.m-padded-tb-mini {
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+.m-padded-tb-tiny {
+    padding-top: 0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+.m-padded-tb-small {
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+.m-padded-tb {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+.m-padded-tb-large {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+.m-padded-tb-big {
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+.m-padded-tb-huge {
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+.m-padded-tb-massive {
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+
+/* ------------------margin------------------ */
+.m-margin-lr-big {
+    margin: auto 2em !important;
+}
+
+.m-margin-tb-none {
+    margin-top: 0em !important;
+    margin-bottom: 0em !important;
+}
+
+.m-margin-tb-tiny {
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+
+.m-margin-tb {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
+
+
+.m-margin-tb-big {
+    margin-top: 2em !important;
+    margin-bottom: 2em !important;
+}
+
+
+.m-margin-tb-large {
+    margin-top: 3em !important;
+    margin-bottom: 3em !important;
+}
+
+.m-margin-tb-massive {
+    margin-top: 10em !important;
+    margin-bottom: 10em !important;
+}
+
+/* -----------------width -------------------*/
+.m-max-width {
+    max-width: 100% !important;
+}
+
+
+/* -------------------- position -----------------*/
+.m-sticky {
+    position: sticky !important;
+    top: 50px;
+}
+
+.m-right-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.m-fixed {
+    position: fixed !important;
+    z-index: 10 !important;
+}
+
+.m-right-bottom {
+    bottom: 0 !important;
+    right: 0 !important;
+}
+
+
+/* ---------------------text ---------------- */
+.m-text {
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.8;
+}
+.m-text-thin {
+    font-weight: 300 !important;
+}
+.m-text-spaced {
+    letter-spacing: 1px !important;
+}
+.m-text-lined {
+    line-height: 1.8;
+}
+
+.m-text-indent {
+    text-indent: 2em;
+}
+
+.m-text-color-white {
+    color: white !important;
+}
+
+.m-text-color-teal {
+    color: rgb(0,181,173) !important;
+}
+
+
+/*-----------------position------------------*/
+.m-fixed {
+    position: fixed !important;
+    z-index: 10 !important;
+}
+
+
+
+/*----------------------opacity-------------------*/
+.m-opacity-mini {
+    opacity: 0.8 !important;
+}
+
+.m-opacity-tiny {
+    opacity: 0.6 !important;
+}
+
+
+
+/*----------------------display----------------*/
+.m-inline-block {
+    display: inline-block !important;
+}
+
+.m-block {
+    display: block !important;
+}
+
+
+
+/* ---------------- color -----------*/
+.m-black {
+    color: #333 !important;
+}
+
+.m-mobile-show {
+    display: none !important;
+}
+
+/* -----------魔改框架--------------- */
+
+
+/* 导航栏被激活 */
+.ui.inverted.blue.menu .active.item {
+    background: rgba(255,255,255,.15) !important;
+}
+
+/* 去除折叠菜单阴影 */
+.ui.styled.accordion, .ui.styled.accordion .accordion {
+    box-shadow: none !important;
+}
+
+/* 去除折叠菜单边线 */
+.ui.styled.accordion .accordion .title, .ui.styled.accordion .title {
+    border: none;
+}
+
+/* ------------------ 响应式 -------------*/
+
+@media screen and (max-width: 768px) {
+    .m-mobile-hide {
+        display: none !important;
+    }
+    .m-mobile-show {
+        display: block !important;
+    }
+}
+

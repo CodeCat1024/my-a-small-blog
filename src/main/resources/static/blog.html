@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+
+    <link rel="stylesheet" href="./lib/typo/typo.css">
+    <link rel="stylesheet" href="./lib/animate/animate.css">
+    <link rel="stylesheet" href="./lib/prism/prism.css">
+    <link rel="stylesheet" href="./lib/tocbot/tocbot.css">
+
+    <link rel="stylesheet" href="./styles/me.css">
+</head>
+<body>
+    
+    <!-- 导航栏 -->
+    <nav class="ui blue inverted attached segment m-padded-tb-mini">
+        <div class="ui container">
+            <div class="ui blue inverted stackable menu">
+                <a href="#" target="_blank"><h2 class="ui teal header item">CodeCat</h2></a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="lightbulb outline icon"></i>杂谈</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="edit outline icon"></i>博客</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="book icon"></i>阅读</a>
+
+                <!-- 搜索框 -->
+                <div class="right m-item item m-mobile-hide">
+                    <div class="ui icon inverted transparent input m-margin-lr-big">
+                        <input type="text" placeholder="search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+
+                <!-- 亮度调节 -->
+                <div class="m-item item m-mobile-hide">
+                    <!-- <div class="ui mini teal buttons basic ">
+                        <div class="ui button ">
+                            <i class="big moon outline icon "></i>
+                            <i class="large angle down icon "></i>
+                        </div>
+                        </div>
+                    </div> -->
+                    <div class="ui inverted icon top left pointing dropdown button">
+                        <i class="sun icon"></i>
+                        <i class="angle down icon"></i>
+                        <div class="menu">
+                            <div class="item">
+                                <i class="moon icon"></i>
+                                <span class="text">Light</span>
+                            </div>
+                            <div class="item">
+                                <i class="sun icon"></i>
+                                <span class="text">Dark</span>
+                            </div>
+                            <div class="item">
+                                <i class="tags icon"></i>
+                                <span class="text">Auto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 响应式导航栏按钮 -->
+        <a href="#" class="ui menu toggle blue icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!-- 中间部分 -->
+    <div class="ui container m-padded-tb-big">
+        <div class="ui grid">
+            <!-- 左边导航部分 -->
+            <div class="four wide column">
+                    <div class="ui segments m-sticky">
+                        <div class="ui top attached segment">
+                            <div class="ui grid">
+                                <div class="eight wide blue column center aligned">
+                                    <a href="#" class="m-text-color-white"><i class="bookmark outline icon"></i>目录</a>
+                                </div>
+                                <div class="eight wide column center aligned">
+                                    <a href="#" class=""><i class="book outline icon"></i>文章列表</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui attached segment">
+                            <ol class="js-toc">
+
+                            </ol>
+                        </div>
+                    </div>
+
+
+            </div>
+            <!-- 右边主体部分 -->
+            <div class="twelve wide column">
+                <div class="ui top attached segment m-padded-large">
+
+                    <!-- 标题 -->
+                    <h2 class="ui center aligned header">
+                        聊聊依赖引入
+                    </h2>
+
+                    <!-- 文章内容 -->
+                    <div id="content" class="m-padded-lr-responsive typo typo-selection js-toc-content">
+
+<h1>一、依赖引入</h1>
+
+<p>在使用别人的框架时，我们通常都需要将别人的框架引入到自己的开发环境中，比如使用semantic ui时，就需要将它的css源码和js源码引入到我们的文件中，那么，你知道在你引入依赖的时候，原理是什么吗？</p>
+
+<h1>二、原理</h1>
+
+<p>想象你在做前端页面的开发时，经常要为文字加一些样式，比如颜色，大小，粗细，间距等，你每次都要写下面这么一段代码</p>
+
+<pre>
+<code class="language-css">.m-text-color {
+color: skyblue;
+}
+.m-text-thin {
+font-weight: 300 !important;
+}
+.m-text-spaced {
+letter-spacing: 1px !important;
+}
+.m-text-lined {
+line-height: 1.8;
+}</code></pre>
+
+<p>当每次你设置的样式都一样时，你会想到把这份代码拷贝下来，放到某个文件夹，以后要用的话直接拷贝一下就行了</p>
+<p>或者，也可以不拷贝，我们可以直接将这份代码保存成my-text-style.css文件，以后要用时，直接在head部分引入一下(假设你将它放在该路径下)</p>
+<pre style="padding: 0px; margin: 0px;">
+<script type="text/html" style="display: block;height: 10px; padding: 0; margin: 0;" >
+<link rel="stylesheet" href="./static/styles/my-text-style.css">
+</script>
+</pre>
+<p>接着，你还可以把更多的样式整合进来，也就是先写好，以后要用的时候，直接在head上引入一下，然后在我们要修改的文本上面加上这个类名就行了
+    甚至，那些你平时经常要写的导航栏、按钮、目录等，也可以写好放在这个css文件里面，到时候我们直接用就行了，就不需要每次都从头开始写了，
+    当你集成的样式越来越多，这个就是你自己做的框架了
+</p>
+<p>
+    那现在我们知道了该怎么使用自己的框架了，那别人的框架呢？
+</p>
+<p>
+    其实也是一样的道理，比如说semantic ui框架，我们直接也是直接将它的css文件引入进来我们的开发环境就行了
+</p>
+<p>比如我们可以来看semantic ui的官网上的引用介绍</p>
+<p><img src="../static/images/1679761529561.png" alt="" class="ui rounded image bordered"></p>
+<p>但是，如果我们直接把这份代码拷贝到自己的文件中，则会出现找不到资源的错误，这是为什么呢？</p>
+<p><img src="../static/images/1679761763772.png" alt="" class="ui image rounded bordered"></p>
+<p>其实就是因为你没有把代码下载到你本地里，这就像你上面引入./static/styles/my-text-style.css文件，但是这份文件已经被你删除了一样</p>
+<p><b>那么，我们只要把semantic ui官方他的“my-text-style.css”文件下载到本地然后引入就行了，跟我们使用自己的css文件没有任何区别</b></p>
+<h1>三、依赖的依赖</h1>
+<p><b>那为什么引入了semantic ui之后还需要引入jQuery依赖呢？</b></p>
+<p>其实很好理解，比方说你先使用你的my-text-style框架写了另一份my-slider-style框架，那你以后引入my-slider-style之前就肯定需要先引入my-text-style啦</p>
+<h1>四、为什么有时候不需要下载源码？</h1>
+<pre><code class="js">  src="https://code.jquery.com/jquery-3.1.1.min.js"</code></pre>
+<p>比如semantic引入jQuery时，为啥引入的是网址而不是文件呢？并且还不需要将jQuery的源码下载到本地，这是为什么呢？而且，打开这个网址，发现里面还是一大堆完全看不懂的东西......</p>
+<p><img src="../static/images/1679762615390.png" alt="" class="ui image rounded bordered"></p>
+<p>其实，这也跟我们将源码下载到本地然后去引用一样的，只是我们将这些源码放到线上而已，这样就不用一直占据我们本地的空间了</p>
+<p>“那为什么这么乱呢？”</p>
+<p>因为这是压缩版，网址上的min就代表这是压缩过后的源代码，这样的话文件更小，加载更快</p>
+<p>不信的话你可以看看去掉这个网址里面的.min，看看没有压缩过的版本</p>
+<p><img src="../static/images/1679762917275.png" alt="" class="ui image rounded bordered"></p>
+<p><b>而且，我们还可以发现，所谓的压缩，不过就是去掉一些空格和换行而已</b></p>
+<h1>五、我非要下载到本地怎么办？</h1>
+<p>其实，明白了原理之后，我们可以很快地猜出，只要我们把网址上的这个源代码拷贝一下，放到我们本地，然后我们再通过平常我们引用自己css文件的方式去引用就可以了，说到底，跟我们使用自己的css和js文件没有任何区别
+</p>
+<p><b>并且，反过来看，我们也知道了如何将我们自己写的css文件通过这种方式放到线上去</b></p>
+<h1>六、总结</h1>
+<p>无论是哪种引入方式，本质都是一样的，无非是一个在线上，一个在本地，并且我们可以猜到，如果放在线上，没有网络的话，肯定是没有办法加载成功的</p>
+<p>但很多时候也没关系，因为用户要访问你的网站本身就需要网络......</p>
+<p>因此，我们只要清楚它的原理，就不会被各种形式所迷惑了</p>
+<p><b>无非就是找到源码，引入到开发环境中</b>
+<p>是通过绝对路径引入还是相对路径引入，或者源码放在哪里，都是无关紧要的事情</p>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <!-- 底部 -->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+
+                <!-- 微信二维码 -->
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/Arts-Stream-Subjects.png" class="ui rounded image" style="width:150px;" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 最新博客 -->
+                <div class="three wide column">
+                    <h4 class="ui inverted header">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">blog1</a>
+                        <a href="#" class="item">blog2</a>
+                        <a href="#" class="item">blog3</a>
+                    </div>
+                </div>
+                
+                <!-- 联系我 -->
+                <div class="three wide column">
+                    <h4 class="ui inverted header">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Emali: 2720883600@qq.com</a>
+                        <a href="#" class="item">QQ: 2720883600</a>
+                    </div>
+                </div>
+                
+                <!-- 介绍 -->
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">介绍</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客，希望每一个来到这里的人都能从中看到一些不一样的思想，也欢迎你们分享，讨论和批评</p>
+                </div>
+            </div>
+
+            <!-- 脚注 -->
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright @ 2022-2023 Lirenmi Designed by lirenmi</p>
+        </div>
+
+        <!-- 分割线 -->
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <script src="./lib/prism/prism.js"></script>
+    <script src="./lib/tocbot/tocbot.js"></script>
+    <script src="./lib/qrcode/qrcode.js"></script>
+    <script src="./lib/scrollto/scrollto.js"></script>
+    <script src="./lib/waypoints/jquery.waypoints.min.js"></script>
+
+    <script>
+    // 响应式导航栏按钮
+    $('.menu.toggle').click(function (){
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    // 亮度调节
+    $('.ui.dropdown').dropdown();
+
+    // tab栏
+    $('.menu .item').tab();
+
+    // 目录初始化
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+</script>
+</body>
+</html>

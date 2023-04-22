@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="./styles/me.css">
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav class="ui blue inverted attached segment m-padded-tb-mini">
+        <div class="ui container">
+            <div class="ui blue inverted stackable menu">
+                <a href="#" target="_blank"><h2 class="ui teal header item">CodeCat</h2></a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="lightbulb outline icon"></i>杂谈</a>
+                <a href="#" class="m-item item m-mobile-hide active"><i class="edit outline icon"></i>博客</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="book icon"></i>阅读</a>
+
+                <!-- 搜索框 -->
+                <div class="right m-item item m-mobile-hide">
+                    <div class="ui icon inverted transparent input m-margin-lr-big">
+                        <input type="text" placeholder="search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+
+                <!-- 亮度调节 -->
+                <div class="m-item item m-mobile-hide">
+                    <!-- <div class="ui mini teal buttons basic ">
+                        <div class="ui button ">
+                            <i class="big moon outline icon "></i>
+                            <i class="large angle down icon "></i>
+                        </div>
+                        </div>
+                    </div> -->
+                    <div class="ui inverted icon top left pointing dropdown button">
+                        <i class="sun icon"></i>
+                        <i class="angle down icon"></i>
+                        <div class="menu">
+                            <div class="item">
+                                <i class="moon icon"></i>
+                                <span class="text">Light</span>
+                            </div>
+                            <div class="item">
+                                <i class="sun icon"></i>
+                                <span class="text">Dark</span>
+                            </div>
+                            <div class="item">
+                                <i class="tags icon"></i>
+                                <span class="text">Auto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 响应式导航栏按钮 -->
+        <a href="#" class="ui menu toggle blue icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!-- 中间部分 -->
+    <div class=" m-padded-tb-big">
+        <div class="ui container">
+            <div class="ui stackable grid">
+                <!-- 左边的top -->    
+                <div class="four wide column">
+                    <div class="m-sticky">
+                        <!-- 分类 -->
+                        <div class="ui segments m-margin-tb-large">
+                            <!-- 头部 -->
+                            <div class="ui secondary segment">
+                                <div class="ui center aligned column grid">
+                                    <div class="column">
+                                        <i class="idea icon"></i>关于计算机的讨论
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 类别 -->
+                            <div class="ui blue segment">
+                                <div class="ui fluid vertical menu">
+                                    <a href="#" class="active item">全部<div class="ui teal basic left pointing label">53</div></a>
+                                    <a href="#" class="item">Java<div class="ui teal basic left pointing label">13</div></a>
+                                    <a href="#" class="item">Python<div class="ui teal basic left pointing label">20</div></a>
+                                    <a href="#" class="item">操作系统<div class="ui teal basic left pointing label">20</div></a>
+                                </div>
+                            </div>
+                    </div>
+
+                    </div>
+                    <!-- 折叠菜单 -->
+                     <!-- <div class="ui segments m-margin-tb-large">
+                        头部
+                        <div class="ui secondary segment">
+                            <div class="ui center aligned column grid">
+                                <div class="column">
+                                    <i class="idea icon"></i>关于计算机的讨论
+                                </div>
+                            </div>
+                        </div>
+                        类别
+                        <div class="ui blue segment">
+                            <div class="ui styled accordion">
+                                <div class="title active">
+                                  <i class="dropdown icon"></i>
+                                  计算机基础
+                                </div>
+                                <div class="content active">
+                                    <div class="accordion transition m-margin-tb-none visible" style="display: block !important;">
+                                        <div class="title active">
+                                            <i class="dropdown icon"></i>
+                                            计算机网络
+                                        </div>
+                                        <div class="content active">
+                                        <p class="transition visible" style="display: block !important;"></p>
+                                        <div class="accordion transition visible" style="display: block !important;">
+                                            <div class="title">
+                                                <i class="dropdown icon"></i>
+                                                HTTP
+                                            </div>
+                                            <div class="content">Level 2A-A 內容 </div>
+                                            <div class="title">
+                                                <i class="dropdown icon"></i>
+                                                协议
+                                            </div>
+                                            <div class="content">Level 1A-B 內容 </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  -->
+                </div>        
+                <!-- 右边的博客列表 -->
+                <div class="twelve wide column">
+                    <!-- 博客篇数 -->
+                    <div class="ui top attached segment">
+                        <div class="m-container-small">
+                            <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <h3 class="ui blue header">全部</h3>
+                            </div>
+                            <div class="right aligned column">
+                                共<h2 class="ui teal header m-inline-block m-text-thin"> 15 </h2>篇
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- 博客内容 -->
+                    <div class="ui attached segment">
+
+                        <div class="m-container-big ui padded vertical segment m-padded-tb">
+                            <!-- 标题 -->
+                            <a href="#" target="_blank"><h3>语言范式</h3></a>
+
+                            <!-- 其他信息 -->
+                            <div class="ui right aligned segment basic m-margin-tb-none m-padded-tb-none">
+                                <div class="ui mini horizontal link list m-margin-tb-none">
+                                    <div class="item">
+                                        <i class="calendar icon"></i> 2023-3-22
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2323
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="m-container-big ui padded vertical segment m-padded-tb">
+                            <!-- 标题 -->
+                            <a href="#" target="_blank"><h3>semantic ui & bootstrap</h3></a>
+
+                            <!-- 其他信息 -->
+                            <div class="ui right aligned segment basic m-margin-tb-none m-padded-tb-none">
+                                <div class="ui mini horizontal link list m-margin-tb-none">
+                                    <div class="item">
+                                        <i class="calendar icon"></i> 2023-3-22
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2323
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-container-big ui padded vertical segment m-padded-tb">
+                            <!-- 标题 -->
+                            <a href="#" target="_blank"><h3>咖啡宝贝是什么？</h3></a>
+
+                            <!-- 其他信息 -->
+                            <div class="ui right aligned segment basic m-margin-tb-none m-padded-tb-none">
+                                <div class="ui mini horizontal link list m-margin-tb-none">
+                                    <div class="item">
+                                        <i class="calendar icon"></i> 2023-3-22
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2323
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-container-big ui padded vertical segment m-padded-tb">
+                            <!-- 标题 -->
+                            <a href="#" target="_blank"><h3>各个语言的Hello World</h3></a>
+
+                            <!-- 其他信息 -->
+                            <div class="ui right aligned segment basic m-margin-tb-none m-padded-tb-none">
+                                <div class="ui mini horizontal link list m-margin-tb-none">
+                                    <div class="item">
+                                        <i class="calendar icon"></i> 2023-3-22
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2323
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-container-big ui padded vertical segment m-padded-tb">
+                            <!-- 标题 -->
+                            <a href="#" target="_blank"><h3>Linux中有趣的命令行</h3></a>
+
+                            <!-- 其他信息 -->
+                            <div class="ui right aligned segment basic m-margin-tb-none m-padded-tb-none">
+                                <div class="ui mini horizontal link list m-margin-tb-none">
+                                    <div class="item">
+                                        <i class="calendar icon"></i> 2023-3-22
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2323
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-container-big ui padded vertical segment m-padded-tb">
+                            <!-- 标题 -->
+                            <a href="#" target="_blank"><h3>Spring是如何运作的</h3></a>
+
+                            <!-- 其他信息 -->
+                            <div class="ui right aligned segment basic m-margin-tb-none m-padded-tb-none">
+                                <div class="ui mini horizontal link list m-margin-tb-none">
+                                    <div class="item">
+                                        <i class="calendar icon"></i> 2023-3-22
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2323
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-container-big ui padded vertical segment m-padded-tb">
+                            <!-- 标题 -->
+                            <a href="#" target="_blank"><h3>认识一门框架</h3></a>
+
+                            <!-- 其他信息 -->
+                            <div class="ui right aligned segment basic m-margin-tb-none m-padded-tb-none">
+                                <div class="ui mini horizontal link list m-margin-tb-none">
+                                    <div class="item">
+                                        <i class="calendar icon"></i> 2023-3-22
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2323
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-container-big ui padded vertical segment m-padded-tb">
+                            <!-- 标题 -->
+                            <a href="#" target="_blank"><h3>有趣的续行符</h3></a>
+
+                            <!-- 其他信息 -->
+                            <div class="ui right aligned segment basic m-margin-tb-none m-padded-tb-none">
+                                <div class="ui mini horizontal link list m-margin-tb-none">
+                                    <div class="item">
+                                        <i class="calendar icon"></i> 2023-3-22
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2323
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- 底部按钮 -->
+                    <div class="ui bottom attached segment">
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <a href="#" class="ui teal button">上一页</a>
+                            </div>
+                            <div class="right aligned column">
+                                <a href="#" class="ui teal button">下一页</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+
+                <!-- 微信二维码 -->
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/Arts-Stream-Subjects.png" class="ui rounded image" style="width:150px;" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 最新博客 -->
+                <div class="three wide column">
+                    <h4 class="ui inverted header">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">你喜欢社交媒体吗？</a>
+                        <a href="#" class="item">生活的债</a>
+                        <a href="#" class="item">如何整理房间</a>
+                    </div>
+                </div>
+                
+                <!-- 联系我 -->
+                <div class="three wide column">
+                    <h4 class="ui inverted header">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Emali: 2720883600@qq.com</a>
+                        <a href="#" class="item">QQ: 2720883600</a>
+                    </div>
+                </div>
+                
+                <!-- 介绍 -->
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">介绍</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客，希望每一个来到这里的人都能从中看到一些不一样的思想，也欢迎你们分享，讨论和批评</p>
+                </div>
+            </div>
+
+            <!-- 脚注 -->
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright @ 2022-2023 Lirenmi Designed by lirenmi</p>
+        </div>
+
+        <!-- 分割线 -->
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script>
+    // 响应式导航栏按钮
+    $('.menu.toggle').click(function (){
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    // 亮度调节
+    $('.ui.dropdown').dropdown();
+  
+</script>
+</body>
+</html>
